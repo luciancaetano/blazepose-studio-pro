@@ -1,0 +1,17 @@
+# ninja log v6
+8	102	7917991535692728	blazestudioprovs_autogen/timestamp	7b331f860de9b354
+349	1878	7917976241501703	CMakeFiles/blazestudioprovs.dir/blazestudioprovs_autogen/mocs_compilation.cpp.obj	db536d55d5531e1
+8	102	7917991535692728	blazestudioprovs_autogen/mocs_compilation.cpp	7b331f860de9b354
+8	102	7917991535692728	C:/workspace/blazestudioprovs/build/Desktop_Qt_6_10_2_MSVC2022_64bit-Debug/blazestudioprovs_autogen/mocs_compilation.cpp	7b331f860de9b354
+8	102	7917991535692728	C:/workspace/blazestudioprovs/build/Desktop_Qt_6_10_2_MSVC2022_64bit-Debug/blazestudioprovs_autogen/timestamp	7b331f860de9b354
+2890	4244	7917991213013327	blazestudioprovs.exe	518b2bf560e1e92d
+355	1832	7917976241566980	CMakeFiles/blazestudioprovs.dir/main.cpp.obj	75c6a22243513b6e
+109	1683	7917991536702911	CMakeFiles/blazestudioprovs.dir/mainwindow.cpp.obj	538272d818335dd7
+8	312	7917992386666498	blazestudioprovs_autogen/timestamp	7b331f860de9b354
+8	312	7917992386666498	blazestudioprovs_autogen/mocs_compilation.cpp	7b331f860de9b354
+8	312	7917992386666498	C:/workspace/blazestudioprovs/build/Desktop_Qt_6_10_2_MSVC2022_64bit-Debug/blazestudioprovs_autogen/timestamp	7b331f860de9b354
+8	312	7917992386666498	C:/workspace/blazestudioprovs/build/Desktop_Qt_6_10_2_MSVC2022_64bit-Debug/blazestudioprovs_autogen/mocs_compilation.cpp	7b331f860de9b354
+313	1744	7917992387127827	CMakeFiles/blazestudioprovs.dir/blazestudioprovs_autogen/mocs_compilation.cpp.obj	9b16a1f7f14112fb
+326	1900	7917992387247855	CMakeFiles/blazestudioprovs.dir/mainwindow.cpp.obj	759977539ba2f0aa
+320	2556	7917992387197842	CMakeFiles/blazestudioprovs.dir/main.cpp.obj	41843ee2ff92cb80
+2557	2775	7917992409568551	blazestudioprovs.exe	518b2bf560e1e92d
