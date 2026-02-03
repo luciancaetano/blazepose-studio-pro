@@ -1,3 +1,4 @@
+#region Project Configuration
 cmake_minimum_required(VERSION 3.16)
 
 project(blazestudioprovs VERSION 0.1 LANGUAGES CXX)
@@ -8,27 +9,84 @@ set(CMAKE_AUTORCC ON)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+#endregion
 
-# OpenCV configuration
-set(OpenCV_DIR "C:/opencv/build")
-include_directories("C:/opencv/build/include")
-set(OpenCV_STATIC OFF)
-find_package(OpenCV QUIET)
-if(OpenCV_FOUND)
-    include_directories(${OpenCV_INCLUDE_DIRS})
-    message(STATUS "OpenCV found: ${OpenCV_VERSION}")
-else()
-    message(WARNING "OpenCV not found - continuing without it")
+#region CPM Package Manager
+include(CPM.cmake)
+
+# Configure CPM cache directory (optional)
+set(CPM_SOURCE_CACHE "${CMAKE_SOURCE_DIR}/.cpm_cache" CACHE PATH "Directory to store CPM packages")
+#endregion
+
+#region OpenCV Configuration
+# Try different possible OpenCV paths for MSVC 2022
+set(OpenCV_DIR "C:/opencv/build/x64/vc17/lib" CACHE PATH "OpenCV directory")
+if(NOT EXISTS ${OpenCV_DIR})
+    set(OpenCV_DIR "C:/opencv/build/x64/vc16/lib")
+endif()
+if(NOT EXISTS ${OpenCV_DIR})
+    set(OpenCV_DIR "C:/opencv/build")
 endif()
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
+find_package(OpenCV REQUIRED COMPONENTS core imgproc highgui)
+
+message(STATUS "OpenCV found: ${OpenCV_VERSION}")
+message(STATUS "OpenCV include dirs: ${OpenCV_INCLUDE_DIRS}")
+message(STATUS "OpenCV libraries: ${OpenCV_LIBS}")
+#endregion
+
+#region ONNX Runtime Configuration
+# Download pre-built ONNX Runtime binaries via CPM
+CPMAddPackage(
+    NAME onnxruntime
+    URL https://github.com/microsoft/onnxruntime/releases/download/v1.17.1/onnxruntime-win-x64-1.17.1.zip
+    DOWNLOAD_ONLY YES
+)
+
+if(onnxruntime_ADDED)
+    set(ONNXRUNTIME_ROOT_DIR ${onnxruntime_SOURCE_DIR})
+    set(ONNXRUNTIME_INCLUDE_DIRS ${ONNXRUNTIME_ROOT_DIR}/include)
+    set(ONNXRUNTIME_LIB_DIR ${ONNXRUNTIME_ROOT_DIR}/lib)
+    
+    # Find the library
+    find_library(ONNXRUNTIME_LIBRARY
+        NAMES onnxruntime
+        PATHS ${ONNXRUNTIME_LIB_DIR}
+        NO_DEFAULT_PATH
+    )
+    
+    if(ONNXRUNTIME_LIBRARY)
+        set(ONNXRUNTIME_LIBS ${ONNXRUNTIME_LIBRARY})
+        message(STATUS "ONNX Runtime found: ${ONNXRUNTIME_LIBRARY}")
+        message(STATUS "ONNX Runtime include dirs: ${ONNXRUNTIME_INCLUDE_DIRS}")
+        
+        # Copy DLL to output directory on Windows
+        file(GLOB ONNXRUNTIME_DLLS "${ONNXRUNTIME_LIB_DIR}/*.dll")
+        if(ONNXRUNTIME_DLLS)
+            file(COPY ${ONNXRUNTIME_DLLS} DESTINATION ${CMAKE_BINARY_DIR})
+            message(STATUS "Copied ONNX Runtime DLLs to build directory")
+        endif()
+    else()
+        message(WARNING "ONNX Runtime library not found in ${ONNXRUNTIME_LIB_DIR}")
+        set(ONNXRUNTIME_LIBS "")
+    endif()
+else()
+    message(WARNING "Failed to download ONNX Runtime")
+    set(ONNXRUNTIME_LIBS "")
+endif()
+#endregion
+
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets OpenGLWidgets)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets OpenGLWidgets)
+find_package(OpenGL REQUIRED)
 
 set(PROJECT_SOURCES
         main.cpp
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
+        videoglwidget.cpp
+        videoglwidget.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -54,10 +112,20 @@ else()
     endif()
 endif()
 
-target_link_libraries(blazestudioprovs PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
-if(OpenCV_FOUND)
-    target_link_libraries(blazestudioprovs PRIVATE ${OpenCV_LIBS})
-endif()
+target_link_libraries(blazestudioprovs PRIVATE 
+    Qt${QT_VERSION_MAJOR}::Widgets
+    Qt${QT_VERSION_MAJOR}::OpenGLWidgets
+    ${OpenCV_LIBS}
+    ${ONNXRUNTIME_LIBS}
+    OpenGL::GL
+)
+
+target_include_directories(blazestudioprovs PRIVATE
+    ${OpenCV_INCLUDE_DIRS}
+    ${ONNXRUNTIME_INCLUDE_DIRS}
+)
+
+message(STATUS "Linking libraries: ${OpenCV_LIBS}")
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an

@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtGui/QAction>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
@@ -19,10 +20,12 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QScrollArea>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTableView>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
+#include "videoglwidget.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -39,16 +42,20 @@ public:
     QVBoxLayout *main_layout;
     QVBoxLayout *video_player_container;
     QWidget *video;
+    QHBoxLayout *horizontalLayout_3;
+    VideoGLWidget *openGLWidget;
     QWidget *controls;
     QHBoxLayout *horizontalLayout_4;
     QHBoxLayout *horizontalLayout_5;
     QPushButton *start_cap;
+    QSpacerItem *horizontalSpacer;
     QPushButton *minus_1;
     QPushButton *minus_01;
     QPushButton *play_btn;
     QPushButton *pause_btn;
     QPushButton *add_01;
     QPushButton *add_1;
+    QSpacerItem *horizontalSpacer_2;
     QPushButton *end_cap;
     QWidget *poses_list;
     QHBoxLayout *horizontalLayout_2;
@@ -100,56 +107,93 @@ public:
         video_player_container->setContentsMargins(8, 8, 8, 8);
         video = new QWidget(centralwidget);
         video->setObjectName("video");
-        video->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 0);"));
+        video->setStyleSheet(QString::fromUtf8(""));
+        horizontalLayout_3 = new QHBoxLayout(video);
+        horizontalLayout_3->setSpacing(0);
+        horizontalLayout_3->setObjectName("horizontalLayout_3");
+        horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
+        openGLWidget = new VideoGLWidget(video);
+        openGLWidget->setObjectName("openGLWidget");
+
+        horizontalLayout_3->addWidget(openGLWidget);
+
 
         video_player_container->addWidget(video);
 
         controls = new QWidget(centralwidget);
         controls->setObjectName("controls");
-        controls->setMaximumSize(QSize(16777215, 80));
+        controls->setMaximumSize(QSize(16777215, 50));
         horizontalLayout_4 = new QHBoxLayout(controls);
+        horizontalLayout_4->setSpacing(0);
         horizontalLayout_4->setObjectName("horizontalLayout_4");
+        horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setSpacing(16);
         horizontalLayout_5->setObjectName("horizontalLayout_5");
         horizontalLayout_5->setContentsMargins(100, -1, 100, -1);
         start_cap = new QPushButton(controls);
         start_cap->setObjectName("start_cap");
+        start_cap->setMinimumSize(QSize(0, 32));
 
         horizontalLayout_5->addWidget(start_cap);
 
+        horizontalSpacer = new QSpacerItem(20, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_5->addItem(horizontalSpacer);
+
         minus_1 = new QPushButton(controls);
         minus_1->setObjectName("minus_1");
+        minus_1->setMinimumSize(QSize(0, 32));
+        minus_1->setMaximumSize(QSize(64, 16777215));
 
         horizontalLayout_5->addWidget(minus_1);
 
         minus_01 = new QPushButton(controls);
         minus_01->setObjectName("minus_01");
+        minus_01->setMinimumSize(QSize(0, 32));
+        minus_01->setMaximumSize(QSize(64, 16777215));
 
         horizontalLayout_5->addWidget(minus_01);
 
         play_btn = new QPushButton(controls);
         play_btn->setObjectName("play_btn");
+        play_btn->setMinimumSize(QSize(0, 32));
+        play_btn->setMaximumSize(QSize(64, 16777215));
+        QIcon icon4(QIcon::fromTheme(QIcon::ThemeIcon::MediaPlaybackStart));
+        play_btn->setIcon(icon4);
 
         horizontalLayout_5->addWidget(play_btn);
 
         pause_btn = new QPushButton(controls);
         pause_btn->setObjectName("pause_btn");
+        pause_btn->setMinimumSize(QSize(0, 32));
+        pause_btn->setMaximumSize(QSize(64, 16777215));
+        QIcon icon5(QIcon::fromTheme(QIcon::ThemeIcon::MediaPlaybackPause));
+        pause_btn->setIcon(icon5);
 
         horizontalLayout_5->addWidget(pause_btn);
 
         add_01 = new QPushButton(controls);
         add_01->setObjectName("add_01");
+        add_01->setMinimumSize(QSize(0, 32));
+        add_01->setMaximumSize(QSize(64, 16777215));
 
         horizontalLayout_5->addWidget(add_01);
 
         add_1 = new QPushButton(controls);
         add_1->setObjectName("add_1");
+        add_1->setMinimumSize(QSize(0, 32));
+        add_1->setMaximumSize(QSize(64, 16777215));
 
         horizontalLayout_5->addWidget(add_1);
 
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_5->addItem(horizontalSpacer_2);
+
         end_cap = new QPushButton(controls);
         end_cap->setObjectName("end_cap");
+        end_cap->setMinimumSize(QSize(0, 32));
 
         horizontalLayout_5->addWidget(end_cap);
 
@@ -166,13 +210,16 @@ public:
         poses_list->setObjectName("poses_list");
         poses_list->setMaximumSize(QSize(16777215, 100));
         horizontalLayout_2 = new QHBoxLayout(poses_list);
+        horizontalLayout_2->setSpacing(0);
         horizontalLayout_2->setObjectName("horizontalLayout_2");
+        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
         scrollArea = new QScrollArea(poses_list);
         scrollArea->setObjectName("scrollArea");
+        scrollArea->setHorizontalScrollBarPolicy(Qt::ScrollBarPolicy::ScrollBarAlwaysOn);
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName("scrollAreaWidgetContents");
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 1141, 80));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 1159, 84));
         scrollArea->setWidget(scrollAreaWidgetContents);
 
         horizontalLayout_2->addWidget(scrollArea);
@@ -187,7 +234,9 @@ public:
         right_toolbar->setObjectName("right_toolbar");
         right_toolbar->setMaximumSize(QSize(300, 16777215));
         verticalLayout = new QVBoxLayout(right_toolbar);
+        verticalLayout->setSpacing(8);
         verticalLayout->setObjectName("verticalLayout");
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
         tableView = new QTableView(right_toolbar);
         tableView->setObjectName("tableView");
 
@@ -239,8 +288,8 @@ public:
         start_cap->setText(QCoreApplication::translate("MainWindow", "StartCapture", nullptr));
         minus_1->setText(QCoreApplication::translate("MainWindow", "-1", nullptr));
         minus_01->setText(QCoreApplication::translate("MainWindow", "-0.1", nullptr));
-        play_btn->setText(QCoreApplication::translate("MainWindow", "Play", nullptr));
-        pause_btn->setText(QCoreApplication::translate("MainWindow", "Pause", nullptr));
+        play_btn->setText(QString());
+        pause_btn->setText(QString());
         add_01->setText(QCoreApplication::translate("MainWindow", "+0.1", nullptr));
         add_1->setText(QCoreApplication::translate("MainWindow", "+1", nullptr));
         end_cap->setText(QCoreApplication::translate("MainWindow", "EndCapture", nullptr));

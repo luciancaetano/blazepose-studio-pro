@@ -46,8 +46,28 @@
         <item>
          <widget class="QWidget" name="video" native="true">
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(0, 0, 0);</string>
+           <string notr="true"/>
           </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="VideoGLWidget" name="openGLWidget"/>
+           </item>
+          </layout>
          </widget>
         </item>
         <item>
@@ -55,10 +75,25 @@
           <property name="maximumSize">
            <size>
             <width>16777215</width>
-            <height>80</height>
+            <height>50</height>
            </size>
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
            <item>
             <layout class="QHBoxLayout" name="horizontalLayout_5">
              <property name="spacing">
@@ -72,13 +107,44 @@
              </property>
              <item>
               <widget class="QPushButton" name="start_cap">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>32</height>
+                </size>
+               </property>
                <property name="text">
                 <string>StartCapture</string>
                </property>
               </widget>
              </item>
              <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
               <widget class="QPushButton" name="minus_1">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>32</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>64</width>
+                 <height>16777215</height>
+                </size>
+               </property>
                <property name="text">
                 <string>-1</string>
                </property>
@@ -86,6 +152,18 @@
              </item>
              <item>
               <widget class="QPushButton" name="minus_01">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>32</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>64</width>
+                 <height>16777215</height>
+                </size>
+               </property>
                <property name="text">
                 <string>-0.1</string>
                </property>
@@ -93,20 +171,62 @@
              </item>
              <item>
               <widget class="QPushButton" name="play_btn">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>32</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>64</width>
+                 <height>16777215</height>
+                </size>
+               </property>
                <property name="text">
-                <string>Play</string>
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset theme="QIcon::ThemeIcon::MediaPlaybackStart"/>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QPushButton" name="pause_btn">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>32</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>64</width>
+                 <height>16777215</height>
+                </size>
+               </property>
                <property name="text">
-                <string>Pause</string>
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset theme="QIcon::ThemeIcon::MediaPlaybackPause"/>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QPushButton" name="add_01">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>32</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>64</width>
+                 <height>16777215</height>
+                </size>
+               </property>
                <property name="text">
                 <string>+0.1</string>
                </property>
@@ -114,13 +234,44 @@
              </item>
              <item>
               <widget class="QPushButton" name="add_1">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>32</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>64</width>
+                 <height>16777215</height>
+                </size>
+               </property>
                <property name="text">
                 <string>+1</string>
                </property>
               </widget>
              </item>
              <item>
+              <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
               <widget class="QPushButton" name="end_cap">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>32</height>
+                </size>
+               </property>
                <property name="text">
                 <string>EndCapture</string>
                </property>
@@ -142,8 +293,26 @@
          </size>
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
          <item>
           <widget class="QScrollArea" name="scrollArea">
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOn</enum>
+           </property>
            <property name="widgetResizable">
             <bool>true</bool>
            </property>
@@ -152,8 +321,8 @@
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>1141</width>
-              <height>80</height>
+              <width>1159</width>
+              <height>84</height>
              </rect>
             </property>
            </widget>
@@ -173,6 +342,21 @@
        </size>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>8</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
        <item>
         <widget class="QTableView" name="tableView"/>
        </item>
@@ -253,6 +437,13 @@
    </property>
   </action>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>VideoGLWidget</class>
+   <extends>QOpenGLWidget</extends>
+   <header>videoglwidget.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

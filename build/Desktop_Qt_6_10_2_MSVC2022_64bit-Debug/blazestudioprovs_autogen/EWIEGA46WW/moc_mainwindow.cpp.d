@@ -2,6 +2,7 @@ C:/workspace/blazestudioprovs/build/Desktop_Qt_6_10_2_MSVC2022_64bit-Debug/blaze
   C:/Program\ Files\ (x86)/Windows\ Kits/10/include/10.0.26100.0/ucrt/assert.h \
   C:/Program\ Files\ (x86)/Windows\ Kits/10/include/10.0.26100.0/ucrt/corecrt.h \
   C:/Program\ Files\ (x86)/Windows\ Kits/10/include/10.0.26100.0/ucrt/corecrt_malloc.h \
+  C:/Program\ Files\ (x86)/Windows\ Kits/10/include/10.0.26100.0/ucrt/corecrt_math.h \
   C:/Program\ Files\ (x86)/Windows\ Kits/10/include/10.0.26100.0/ucrt/corecrt_memcpy_s.h \
   C:/Program\ Files\ (x86)/Windows\ Kits/10/include/10.0.26100.0/ucrt/corecrt_memory.h \
   C:/Program\ Files\ (x86)/Windows\ Kits/10/include/10.0.26100.0/ucrt/corecrt_search.h \
@@ -9,11 +10,15 @@ C:/workspace/blazestudioprovs/build/Desktop_Qt_6_10_2_MSVC2022_64bit-Debug/blaze
   C:/Program\ Files\ (x86)/Windows\ Kits/10/include/10.0.26100.0/ucrt/corecrt_wstdio.h \
   C:/Program\ Files\ (x86)/Windows\ Kits/10/include/10.0.26100.0/ucrt/corecrt_wstdlib.h \
   C:/Program\ Files\ (x86)/Windows\ Kits/10/include/10.0.26100.0/ucrt/corecrt_wstring.h \
+  C:/Program\ Files\ (x86)/Windows\ Kits/10/include/10.0.26100.0/ucrt/corecrt_wtime.h \
   C:/Program\ Files\ (x86)/Windows\ Kits/10/include/10.0.26100.0/ucrt/errno.h \
+  C:/Program\ Files\ (x86)/Windows\ Kits/10/include/10.0.26100.0/ucrt/float.h \
+  C:/Program\ Files\ (x86)/Windows\ Kits/10/include/10.0.26100.0/ucrt/math.h \
   C:/Program\ Files\ (x86)/Windows\ Kits/10/include/10.0.26100.0/ucrt/stddef.h \
   C:/Program\ Files\ (x86)/Windows\ Kits/10/include/10.0.26100.0/ucrt/stdio.h \
   C:/Program\ Files\ (x86)/Windows\ Kits/10/include/10.0.26100.0/ucrt/stdlib.h \
   C:/Program\ Files\ (x86)/Windows\ Kits/10/include/10.0.26100.0/ucrt/string.h \
+  C:/Program\ Files\ (x86)/Windows\ Kits/10/include/10.0.26100.0/ucrt/time.h \
   C:/Qt/6.10.2/msvc2022_64/include/QtCore/q17memory.h \
   C:/Qt/6.10.2/msvc2022_64/include/QtCore/q20functional.h \
   C:/Qt/6.10.2/msvc2022_64/include/QtCore/q20iterator.h \
@@ -175,37 +180,159 @@ C:/workspace/blazestudioprovs/build/Desktop_Qt_6_10_2_MSVC2022_64bit-Debug/blaze
   C:/Qt/6.10.2/msvc2022_64/include/QtWidgets/qtwidgetsexports.h \
   C:/Qt/6.10.2/msvc2022_64/include/QtWidgets/qtwidgetsglobal.h \
   C:/Qt/6.10.2/msvc2022_64/include/QtWidgets/qwidget.h \
+  C:/opencv/build/include/opencv2/calib3d.hpp \
+  C:/opencv/build/include/opencv2/core.hpp \
+  C:/opencv/build/include/opencv2/core/affine.hpp \
+  C:/opencv/build/include/opencv2/core/async.hpp \
+  C:/opencv/build/include/opencv2/core/base.hpp \
+  C:/opencv/build/include/opencv2/core/bufferpool.hpp \
+  C:/opencv/build/include/opencv2/core/check.hpp \
+  C:/opencv/build/include/opencv2/core/cuda.hpp \
+  C:/opencv/build/include/opencv2/core/cuda.inl.hpp \
+  C:/opencv/build/include/opencv2/core/cuda_types.hpp \
+  C:/opencv/build/include/opencv2/core/cv_cpu_dispatch.h \
+  C:/opencv/build/include/opencv2/core/cvdef.h \
+  C:/opencv/build/include/opencv2/core/cvstd.hpp \
+  C:/opencv/build/include/opencv2/core/cvstd.inl.hpp \
+  C:/opencv/build/include/opencv2/core/cvstd_wrapper.hpp \
+  C:/opencv/build/include/opencv2/core/fast_math.hpp \
+  C:/opencv/build/include/opencv2/core/hal/interface.h \
+  C:/opencv/build/include/opencv2/core/mat.hpp \
+  C:/opencv/build/include/opencv2/core/mat.inl.hpp \
+  C:/opencv/build/include/opencv2/core/matx.hpp \
+  C:/opencv/build/include/opencv2/core/matx.inl.hpp \
+  C:/opencv/build/include/opencv2/core/neon_utils.hpp \
+  C:/opencv/build/include/opencv2/core/operations.hpp \
+  C:/opencv/build/include/opencv2/core/optim.hpp \
+  C:/opencv/build/include/opencv2/core/ovx.hpp \
+  C:/opencv/build/include/opencv2/core/persistence.hpp \
+  C:/opencv/build/include/opencv2/core/saturate.hpp \
+  C:/opencv/build/include/opencv2/core/traits.hpp \
+  C:/opencv/build/include/opencv2/core/types.hpp \
+  C:/opencv/build/include/opencv2/core/utility.hpp \
+  C:/opencv/build/include/opencv2/core/utils/logger.defines.hpp \
+  C:/opencv/build/include/opencv2/core/utils/logger.hpp \
+  C:/opencv/build/include/opencv2/core/utils/logtag.hpp \
+  C:/opencv/build/include/opencv2/core/version.hpp \
+  C:/opencv/build/include/opencv2/core/vsx_utils.hpp \
+  C:/opencv/build/include/opencv2/dnn.hpp \
+  C:/opencv/build/include/opencv2/dnn/dict.hpp \
+  C:/opencv/build/include/opencv2/dnn/dnn.hpp \
+  C:/opencv/build/include/opencv2/dnn/dnn.inl.hpp \
+  C:/opencv/build/include/opencv2/dnn/layer.hpp \
+  C:/opencv/build/include/opencv2/dnn/utils/inference_engine.hpp \
+  C:/opencv/build/include/opencv2/dnn/version.hpp \
+  C:/opencv/build/include/opencv2/features2d.hpp \
+  C:/opencv/build/include/opencv2/flann.hpp \
+  C:/opencv/build/include/opencv2/flann/all_indices.h \
+  C:/opencv/build/include/opencv2/flann/allocator.h \
+  C:/opencv/build/include/opencv2/flann/any.h \
+  C:/opencv/build/include/opencv2/flann/autotuned_index.h \
+  C:/opencv/build/include/opencv2/flann/composite_index.h \
+  C:/opencv/build/include/opencv2/flann/config.h \
+  C:/opencv/build/include/opencv2/flann/defines.h \
+  C:/opencv/build/include/opencv2/flann/dist.h \
+  C:/opencv/build/include/opencv2/flann/dynamic_bitset.h \
+  C:/opencv/build/include/opencv2/flann/flann_base.hpp \
+  C:/opencv/build/include/opencv2/flann/general.h \
+  C:/opencv/build/include/opencv2/flann/ground_truth.h \
+  C:/opencv/build/include/opencv2/flann/heap.h \
+  C:/opencv/build/include/opencv2/flann/hierarchical_clustering_index.h \
+  C:/opencv/build/include/opencv2/flann/index_testing.h \
+  C:/opencv/build/include/opencv2/flann/kdtree_index.h \
+  C:/opencv/build/include/opencv2/flann/kdtree_single_index.h \
+  C:/opencv/build/include/opencv2/flann/kmeans_index.h \
+  C:/opencv/build/include/opencv2/flann/linear_index.h \
+  C:/opencv/build/include/opencv2/flann/logger.h \
+  C:/opencv/build/include/opencv2/flann/lsh_index.h \
+  C:/opencv/build/include/opencv2/flann/lsh_table.h \
+  C:/opencv/build/include/opencv2/flann/matrix.h \
+  C:/opencv/build/include/opencv2/flann/miniflann.hpp \
+  C:/opencv/build/include/opencv2/flann/nn_index.h \
+  C:/opencv/build/include/opencv2/flann/params.h \
+  C:/opencv/build/include/opencv2/flann/random.h \
+  C:/opencv/build/include/opencv2/flann/result_set.h \
+  C:/opencv/build/include/opencv2/flann/sampling.h \
+  C:/opencv/build/include/opencv2/flann/saving.h \
+  C:/opencv/build/include/opencv2/flann/timer.h \
+  C:/opencv/build/include/opencv2/highgui.hpp \
+  C:/opencv/build/include/opencv2/imgcodecs.hpp \
+  C:/opencv/build/include/opencv2/imgproc.hpp \
+  C:/opencv/build/include/opencv2/imgproc/segmentation.hpp \
+  C:/opencv/build/include/opencv2/ml.hpp \
+  C:/opencv/build/include/opencv2/ml/ml.inl.hpp \
+  C:/opencv/build/include/opencv2/objdetect.hpp \
+  C:/opencv/build/include/opencv2/objdetect/aruco_board.hpp \
+  C:/opencv/build/include/opencv2/objdetect/aruco_detector.hpp \
+  C:/opencv/build/include/opencv2/objdetect/aruco_dictionary.hpp \
+  C:/opencv/build/include/opencv2/objdetect/barcode.hpp \
+  C:/opencv/build/include/opencv2/objdetect/charuco_detector.hpp \
+  C:/opencv/build/include/opencv2/objdetect/detection_based_tracker.hpp \
+  C:/opencv/build/include/opencv2/objdetect/face.hpp \
+  C:/opencv/build/include/opencv2/objdetect/graphical_code_detector.hpp \
+  C:/opencv/build/include/opencv2/opencv.hpp \
+  C:/opencv/build/include/opencv2/opencv_modules.hpp \
+  C:/opencv/build/include/opencv2/photo.hpp \
+  C:/opencv/build/include/opencv2/stitching.hpp \
+  C:/opencv/build/include/opencv2/stitching/detail/blenders.hpp \
+  C:/opencv/build/include/opencv2/stitching/detail/camera.hpp \
+  C:/opencv/build/include/opencv2/stitching/detail/exposure_compensate.hpp \
+  C:/opencv/build/include/opencv2/stitching/detail/matchers.hpp \
+  C:/opencv/build/include/opencv2/stitching/detail/motion_estimators.hpp \
+  C:/opencv/build/include/opencv2/stitching/detail/seam_finders.hpp \
+  C:/opencv/build/include/opencv2/stitching/detail/util.hpp \
+  C:/opencv/build/include/opencv2/stitching/detail/util_inl.hpp \
+  C:/opencv/build/include/opencv2/stitching/detail/warpers.hpp \
+  C:/opencv/build/include/opencv2/stitching/detail/warpers_inl.hpp \
+  C:/opencv/build/include/opencv2/stitching/warpers.hpp \
+  C:/opencv/build/include/opencv2/video.hpp \
+  C:/opencv/build/include/opencv2/video/background_segm.hpp \
+  C:/opencv/build/include/opencv2/video/tracking.hpp \
+  C:/opencv/build/include/opencv2/videoio.hpp \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/algorithm \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/array \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/atomic \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cassert \
+  D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cctype \
+  D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cfloat \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/chrono \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/climits \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cmath \
+  D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/complex \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/concurrencysal.h \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cstddef \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cstdint \
+  D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cstdio \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cstdlib \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/cstring \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/functional \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/initializer_list \
+  D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/iomanip \
+  D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/iostream \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/iterator \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/limits \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/limits.h \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/list \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/map \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/memory \
+  D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/mutex \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/new \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/numeric \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/optional \
+  D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/ostream \
+  D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/queue \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/sal.h \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/set \
+  D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/sstream \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/stdarg.h \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/stdbool.h \
+  D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/stdexcept \
+  D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/stdint.h \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/string \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/string_view \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/tuple \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/type_traits \
+  D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/typeinfo \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/unordered_map \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/unordered_set \
   D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/utility \
