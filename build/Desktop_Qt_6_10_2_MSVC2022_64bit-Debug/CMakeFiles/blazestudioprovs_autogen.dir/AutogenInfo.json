@@ -526,6 +526,12 @@
 			null
 		],
 		[
+			"C:/workspace/blazestudioprovs/include/ui/pluginmanagerwindow.h",
+			"MU",
+			"JCP2AIONHY/moc_pluginmanagerwindow.cpp",
+			null
+		],
+		[
 			"C:/workspace/blazestudioprovs/include/widgets/videoglwidget.h",
 			"MU",
 			"MROXUFLNXW/moc_videoglwidget.cpp",
@@ -619,6 +625,11 @@
 			null
 		],
 		[ "C:/workspace/blazestudioprovs/src/ui/mainwindow.cpp", "MU", null ],
+		[
+			"C:/workspace/blazestudioprovs/src/ui/pluginmanagerwindow.cpp",
+			"MU",
+			null
+		],
 		[
 			"C:/workspace/blazestudioprovs/src/widgets/videoglwidget.cpp",
 			"MU",

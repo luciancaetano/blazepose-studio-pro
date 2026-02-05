@@ -207,8 +207,10 @@ blazestudioprovs_autogen/timestamp: \
 	C:/Qt/6.10.2/msvc2022_64/include/QtOpenGLWidgets/qopenglwidget.h \
 	C:/Qt/6.10.2/msvc2022_64/include/QtOpenGLWidgets/qtopenglwidgetsexports.h \
 	C:/Qt/6.10.2/msvc2022_64/include/QtOpenGLWidgets/qtopenglwidgetsglobal.h \
+	C:/Qt/6.10.2/msvc2022_64/include/QtWidgets/QDialog \
 	C:/Qt/6.10.2/msvc2022_64/include/QtWidgets/QMainWindow \
 	C:/Qt/6.10.2/msvc2022_64/include/QtWidgets/QWidget \
+	C:/Qt/6.10.2/msvc2022_64/include/QtWidgets/qdialog.h \
 	C:/Qt/6.10.2/msvc2022_64/include/QtWidgets/qmainwindow.h \
 	C:/Qt/6.10.2/msvc2022_64/include/QtWidgets/qsizepolicy.h \
 	C:/Qt/6.10.2/msvc2022_64/include/QtWidgets/qtabwidget.h \
@@ -651,12 +653,14 @@ blazestudioprovs_autogen/timestamp: \
 	C:/workspace/blazestudioprovs/include/plugins/ivideoplugin.h \
 	C:/workspace/blazestudioprovs/include/plugins/overlayvideoplugin.h \
 	C:/workspace/blazestudioprovs/include/ui/mainwindow.h \
+	C:/workspace/blazestudioprovs/include/ui/pluginmanagerwindow.h \
 	C:/workspace/blazestudioprovs/include/widgets/videoglwidget.h \
 	C:/workspace/blazestudioprovs/src/core/videopluginmanager.cpp \
 	C:/workspace/blazestudioprovs/src/main.cpp \
 	C:/workspace/blazestudioprovs/src/plugins/edgedetectionplugin.cpp \
 	C:/workspace/blazestudioprovs/src/plugins/overlayvideoplugin.cpp \
 	C:/workspace/blazestudioprovs/src/ui/mainwindow.cpp \
+	C:/workspace/blazestudioprovs/src/ui/pluginmanagerwindow.cpp \
 	C:/workspace/blazestudioprovs/src/widgets/videoglwidget.cpp \
 	D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/algorithm \
 	D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/array \
@@ -714,4 +718,5 @@ blazestudioprovs_autogen/timestamp: \
 	D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/yvals.h \
 	D:/Microsoft\ Visual\ Studio/18/Community/VC/Tools/MSVC/14.50.35717/include/yvals_core.h \
 	C:/workspace/blazestudioprovs/src/ui/mainwindow.ui \
+	C:/workspace/blazestudioprovs/src/ui/pluginmanagerwindow.ui \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe
