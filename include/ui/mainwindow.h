@@ -2,7 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <opencv2/opencv.hpp>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -20,11 +19,25 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_actionOpen_triggered();
+
+    void on_play_btn_clicked();
+
+    void on_pause_btn_clicked();
+
+    void on_add_01_clicked();
+
+    void on_add_1_clicked();
+
+    void on_minus_01_clicked();
+
+    void on_minus_1_clicked();
+
 private:
-    void loadAndDisplayImage();
-    
+    void setupPlugins();
+
     Ui::MainWindow *ui;
     VideoGLWidget *videoWidget;
-    cv::Mat currentImage;
 };
 #endif // MAINWINDOW_H

@@ -77,16 +77,23 @@ endif()
 #endregion
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets OpenGLWidgets)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets OpenGLWidgets)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets OpenGLWidgets Multimedia)
 find_package(OpenGL REQUIRED)
 
 set(PROJECT_SOURCES
-        main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
-        videoglwidget.cpp
-        videoglwidget.h
+        src/main.cpp
+        src/ui/mainwindow.cpp
+        include/ui/mainwindow.h
+        src/ui/mainwindow.ui
+        src/widgets/videoglwidget.cpp
+        include/widgets/videoglwidget.h
+        src/core/videopluginmanager.cpp
+        include/core/videopluginmanager.h
+        include/plugins/ivideoplugin.h
+        src/plugins/overlayvideoplugin.cpp
+        include/plugins/overlayvideoplugin.h
+        src/plugins/edgedetectionplugin.cpp
+        include/plugins/edgedetectionplugin.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -115,12 +122,18 @@ endif()
 target_link_libraries(blazestudioprovs PRIVATE 
     Qt${QT_VERSION_MAJOR}::Widgets
     Qt${QT_VERSION_MAJOR}::OpenGLWidgets
+    Qt${QT_VERSION_MAJOR}::Multimedia
     ${OpenCV_LIBS}
     ${ONNXRUNTIME_LIBS}
     OpenGL::GL
 )
 
 target_include_directories(blazestudioprovs PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/core
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/ui
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/plugins
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/widgets
     ${OpenCV_INCLUDE_DIRS}
     ${ONNXRUNTIME_INCLUDE_DIRS}
 )
